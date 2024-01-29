@@ -1,0 +1,65 @@
+{
+  "header": {
+    "about": "sobre",
+    "projects": "projetos",
+    "contact": "contato"
+  },
+  "hero": {
+    "hi": "Olá",
+    "i-am": "me chamo",
+    "brief-description-title": "Desenvolvedor Full-Stack",
+    "brief-description-detail": "focado em criar soluções com qualidade e elegância."
+  },
+  "about": {
+    "overview": "Visão Geral",
+    "introduction": "Introdução",
+    "description": "Sou um dedicado Desenvolvedor Full Stack com dois anos de experiência, especializado em desenvolvimento front-end e back-end. Proficiente em tecnologias como React, TypeScript, NextJS, NestJS, MongoDB, SOLID e Clean Architecture, priorizo a entrega de produtos de alta qualidade. Meu comprometimento com detalhes, testes rigorosos e aderência às melhores práticas da indústria reflete meu foco na qualidade. Com uma formação em Análise e Desenvolvimento de Sistemas, trago uma sólida base teórica para minha experiência prática. Ansioso para contribuir para projetos inovadores e colaborar com equipes dinâmicas, estou bem preparado para enfrentar os desafios do cenário tecnológico em constante evolução.",
+    "front-end-developer": "Desenvolvedor Frontend",
+    "back-end-developer": "Desenvolvedor Backend",
+    "mobile-developer": "Desenvolvedor Mobile"
+  },
+  "tech": {
+    "my-skills": "Minhas Habilidades",
+    "technologies": "Tecnologias."
+  },
+  "projects": {
+    "case-studies": "Estudos de Caso",
+    "projects": "Projetos.",
+    "description": "Esses projetos demonstram minha experiência com exemplos práticos do meu trabalho, incluindo breves descrições e links para repositórios de código e demonstrações ao vivo. Eles destacam minha capacidade de enfrentar desafios intricados, adaptar-se a várias tecnologias e supervisionar projetos de forma eficiente.",
+    "projects-description": {
+      "p1": "Projeto de uma Pokedex simples",
+      "p2": "Página de Destino Simples para iPhone",
+      "p3": "Este é um modelo de portfólio onde utilizo objetos em 3D.",
+      "p4": "Um aplicativo completo para barbearia em dispositivos móveis.",
+      "p5": "Este é um site de barbearia onde os clientes podem agendar um horário em uma barbearia."
+    }
+  },
+  "experience": {
+    "what-i-have-done-so-far": "O que fiz até agora",
+    "work-experience": "Experiência Profissional",
+    "my-resume": "meu curriculo",
+    "experiences": {
+      "exp1": "Desenvolvedor Full Stack",
+      "exp2": "Desenvolvedor Full Stack",
+      "exp3": "Estagiário em Desenvolvimento de Software",
+      "exp4": "Estagiário em Desenvolvimento de Software"
+    }
+  },
+  "contact": {
+    "get-in-touch": "Entre em contato",
+    "contact": "Contato",
+    "form": {
+      "your-name": "Seu nome",
+      "what-is-your-name": "Qual é o seu nome?",
+      "your-email": "Seu e-mail",
+      "what-is-your-email": "Qual é o seu e-mail?",
+      "your-message": "Sua mensagem",
+      "what-is-your-message": "Qual é a sua mensagem?",
+      "send": "Enviar",
+      "sending": "Enviando",
+      "empty-warning": "Por favor, preencha todos os campos antes de enviar o formulário.",
+      "success": "Obrigado. Entrarei em contato o mais breve possível.",
+      "error": "Algo deu errado. Por favor, tente novamente."
+    }
+  }
+}

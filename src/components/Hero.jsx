@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { emesson, bwmap, worldmap } from '../assets';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
@@ -32,7 +35,8 @@ const Hero = () => {
 
           <div>
             <h1 className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
-              Hi,  I&apos;m{" "}
+             
+              {t('hero.hi')},  {t('hero.i-am')}{' '}
               <span
                 className="sm:text-battleGray sm:text-[90px] 
                 text-eerieBlack text-[50px] font-mova
@@ -42,9 +46,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Full-stack developer  {" "}
-              <br className="sm:block hidden" />
-              focused on creating solutions with quality and elegance.
+              {t("hero.brief-description-title")} <br className="sm:block hidden" />
+              {t("hero.brief-description-detail")}
             </p>
           </div>
           <div

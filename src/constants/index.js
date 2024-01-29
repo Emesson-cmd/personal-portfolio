@@ -29,29 +29,29 @@ import {
 export const navLinks = [
   {
     id: 'about',
-    title: 'About',
+    title: 'header.about',
   },
   {
     id: 'projects',
-    title: 'Projects',
+    title: 'header.projects',
   },
   {
     id: 'contact',
-    title: 'Contact',
+    title: 'header.contact',
   },
 ];
 
 const services = [
   {
-    title: 'Frontend Developer',
+    title: 'about.front-end-developer',
     icon: frontend,
   },
   {
-    title: 'Backend Developer',
+    title: 'about.back-end-developer',
     icon: backend,
   },
   {
-    title: 'Mobile Developer',
+    title: 'about.mobile-developer',
     icon: mobile,
   },
 ];
@@ -117,28 +117,28 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Full-Stack Developer',
+    title: 'experience.experiences.exp1',
     company_name: 'SENAI Digital Soluions',
     icon: senai,
     iconBg: '#333333',
     date: 'Oct 2023 - Present',
   },
   {
-    title: 'Full-Stack Develop',
+    title: 'experience.experiences.exp2',
     company_name: 'CMOS DRAKE',
     icon: cmos,
     iconBg: '#333333',
     date: 'Nov 2022 - Oct 2023',
   },
   {
-    title: 'Intern Software Devellop',
+    title: 'experience.experiences.exp3',
     company_name: 'UFCA Universidade Federal do Cariri',
     icon: ufca,
     iconBg: '#333333',
     date: 'May 2022 - Nov 2022',
   },
   {
-    title: 'Intern Software Developer',
+    title: 'experience.experiences.exp4',
     company_name: 'UFCA Universidade Federal do Cariri',
     icon: ufca,
     iconBg: '#333333',
@@ -150,7 +150,7 @@ const projects = [
   {
     id: 'project-1',
     name: 'Pokedex',
-    description: 'It`s a simple Pokedex Project',
+    description: 'projects.projects-description.p1',
     tags: [
       {
         name: 'react',
@@ -172,7 +172,7 @@ const projects = [
   {
     id: 'project-2',
     name: 'Apple',
-    description: 'Simple Iphone Landing Page',
+    description: 'projects.projects-description.p2',
     tags: [
       {
         name: 'react',
@@ -194,7 +194,7 @@ const projects = [
   {
     id: 'project-3',
     name: '3D Portfolio',
-    description: 'This is a portfolio template where I use 3D objetcs.',
+    description: 'projects.projects-description.p3',
     tags: [
       {
         name: 'nextjs',
@@ -216,7 +216,7 @@ const projects = [
   {
     id: 'project-4',
     name: 'Barber Tech',
-    description: `A complete barber shop app for mobile devices.`,
+    description: `projects.projects-description.p4`,
     tags: [
       {
         name: 'nextjs',
@@ -238,8 +238,7 @@ const projects = [
   {
     id: 'project-5',
     name: 'Tonys Cabeleireiro',
-    description:
-      'This is a barber shop website where customers can schedule an appointment in a barber shop.',
+    description: 'projects.projects-description.p5',
     tags: [
       {
         name: 'nextjs',

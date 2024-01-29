@@ -1,12 +1,34 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import '../i18n';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { close, menu, logo } from '../assets';
+import { close, menu, logo, usa, brazil, spain } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [currentLng, setCurrentLng] = useState('en');
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    let nextLng = '';
+
+    if (currentLng === 'en') {
+      setCurrentLng('pt');
+      nextLng = 'pt';
+    } else if (currentLng === 'pt') {
+      setCurrentLng('es');
+      nextLng = 'es';
+    } else {
+      setCurrentLng('en');
+      nextLng = 'en';
+    }
+
+    i18n.changeLanguage(nextLng);
+  };
 
   return (
     <nav
@@ -36,12 +58,21 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? 'text-french' : 'text-eerieBlack'
               } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
+                uppercase tracking-[3px] cursor-pointer nav-links flex items-center`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}>{t(nav.title)}</a>
             </li>
           ))}
+
+          <li>
+            <button onClick={changeLanguage}>
+              <img
+                src={currentLng === 'en' ? usa : currentLng === 'pt' ? brazil : spain}
+                alt={currentLng}
+              />
+            </button>
+          </li>
         </ul>
 
         {/* mobile */}
@@ -76,9 +107,21 @@ const Navbar = () => {
                       setActive(nav.title);
                     }}
                   >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
+                    <a href={`#${nav.id}`}>{t(nav.title)}</a>
                   </li>
                 ))}
+
+                <li>
+                  <button onClick={changeLanguage}>
+                    <img
+                      src={currentLng === 'en' ? usa : currentLng === 'pt' ? brazil : spain}
+                      alt={currentLng}
+                      width={64}
+                      height={64}
+                      className='mt-6'
+                    />
+                  </button>
+                </li>
               </ul>
             </div>
           ) : (

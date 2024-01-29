@@ -1,0 +1,65 @@
+{
+  "header": {
+    "about": "about",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "hero": {
+    "hi": "Hi",
+    "i-am": "I`m",
+    "brief-description-title": "Full-Stack Developer",
+    "brief-description-detail": "focused on creating solutions with quality and elegance."
+  },
+  "about": {
+    "overview": "Overview",
+    "introduction": "introduction",
+    "description": "I am a dedicated Full Stack Developer with two years of experience, specializing in both front-end and back-end development. Proficient in technologies like React, TypeScript, NextJS, NestJS, MongoDB, SOLID, and Clean Architecture, I prioritize delivering high-quality products. My commitment to detail, rigorous testing, and adherence to industry best practices reflects my focus on quality. With a degree in Analysis and Development of Systems, I bring a solid theoretical foundation to my practical experience. Eager to contribute to innovative projects and collaborate with dynamic teams, I am well-equipped to navigate the challenges of the ever-evolving tech landscape.",
+    "front-end-developer": "Frontend Developer",
+    "back-end-developer": "Backend Developer",
+    "mobile-developer": "Mobile Developer"
+  },
+  "tech": {
+    "my-skills": "My Skills",
+    "technologies": "Technologies."
+  },
+  "projects": {
+    "case-studies": "Case studies",
+    "projects": "Projects.",
+    "description": "These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos. They showcase my ability to tackle intricate challenges, adapt to various technologies, and efficiently oversee projects.",
+    "projects-description": {
+      "p1": "It`s a simple Pokedex Project",
+      "p2": "Simple Iphone Landing Page",
+      "p3": "This is a portfolio template where I use 3D objetcs.",
+      "p4": "A complete barber shop app for mobile devices.",
+      "p5": "This is a barber shop website where customers can schedule an appointment in a barber shop."
+    }
+  },
+  "experience": {
+    "what-i-have-done-so-far": "What I`ve done so far",
+    "work-experience": "Work Experience.",
+    "my-resume": "my resume",
+    "experiences": {
+      "exp1": "Full-Stack Developer",
+      "exp2": "Full-Stack Developer",
+      "exp3": "Intern Software Devellop",
+      "exp4": "Intern Software Developer"
+    }
+  },
+  "contact": {
+    "get-in-touch": "Get in touch",
+    "contact": "Contact.",
+    "form": {
+      "your-name":  "Your name",
+      "what-is-your-name": "What`s your name?",
+      "your-email":  "Your email",
+      "what-is-your-email": "What`s your email?",
+      "your-message":  "Your message",
+      "what-is-your-message": "What`s your message?",
+      "send": "Send",
+      "sending": "Sending",
+      "empty-warning": "Please, fill all fields before submitting form.",
+      "success": "Thank you. I will get back to you as soon as possible.",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}

@@ -5,8 +5,11 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { send, sendHover } from '../assets';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -22,20 +25,20 @@ const Contact = () => {
   };
 
   const validateFields = () => {
-    if(!form.name || !form.email || !form.message){
-      alert("Please, fill all fields before submitting form.")
-      return false
+    if (!form.name || !form.email || !form.message) {
+      alert(t('contact.form.empty-warning'));
+      return false;
     }
-    return true
-  }
-  
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(!validateFields()){
-      return
+    if (!validateFields()) {
+      return;
     }
-    
+
     setLoading(true);
 
     emailjs
@@ -44,17 +47,17 @@ const Contact = () => {
         'template_z6gq71k',
         {
           name: form.name,
-          to_name: "Emesson Cavalcante",
+          to_name: 'Emesson Cavalcante',
           message: form.message,
           email: form.email,
-          reply_to: "emerssonkavallcante@gmail.com",
-          },
+          reply_to: 'emerssonkavallcante@gmail.com',
+        },
         '_EP7JV70Yi5LjMvO5'
       )
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          alert(t('contact.form.success'));
 
           setForm({
             name: '',
@@ -65,7 +68,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          alert('Something went wrong. Please try again.');
+          alert(t('contact.form.error'));
         }
       );
   };
@@ -73,25 +76,28 @@ const Contact = () => {
   return (
     <div
       className="-mt-[8rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden">
+      flex gap-10 overflow-hidden"
+    >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
+        className="flex-[0.75] bg-jet p-8 rounded-2xl"
+      >
+        <p className={styles.sectionSubText}>{t('contact.get-in-touch')}</p>
+        <h3 className={styles.sectionHeadTextLight}>{t('contact.contact')}</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col gap-6 font-poppins">
+          className="mt-10 flex flex-col gap-6 font-poppins"
+        >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Name</span>
+            <span className="text-timberWolf font-medium mb-4">{t('contact.form.your-name')}</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder={t('contact.form.what-is-your-name')}
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -99,13 +105,13 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
+            <span className="text-timberWolf font-medium mb-4">{t('contact.form.your-email')}</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder={t('contact.form.what-is-your-email')}
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -114,14 +120,14 @@ const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">
-              Your Message
+              {t('contact.form.your-message')}
             </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What's your message?"
+              placeholder={t('contact.form.what-is-your-message')}
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
@@ -139,14 +145,13 @@ const Contact = () => {
             hover:bg-battleGray hover:text-eerieBlack 
             transition duration-[0.2s] ease-in-out"
             onMouseOver={() => {
-              document
-                .querySelector('.contact-btn')
-                .setAttribute('src', sendHover);
+              document.querySelector('.contact-btn').setAttribute('src', sendHover);
             }}
             onMouseOut={() => {
               document.querySelector('.contact-btn').setAttribute('src', send);
-            }}>
-            {loading ? 'Sending' : 'Send'}
+            }}
+          >
+            {loading ? t('contact.form.sending') : t('contact.form.send')}
             <img
               src={send}
               alt="send"

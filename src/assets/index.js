@@ -46,6 +46,10 @@ import portfolio from './projects/3d_portfolio.png';
 import barbertech from './projects/barber_tech.png';
 import apple from './projects/apple.png';
 
+import usa from './countries/usa.png'
+import brazil from './countries/brazil.png'
+import spain from './countries/spain.png'
+
 export {
   bwmap,
   nairobi,
@@ -87,5 +91,8 @@ export {
   barbertech,
   ufca,
   senai,
-  cmos
+  cmos,
+  usa,
+  brazil,
+  spain
 };
