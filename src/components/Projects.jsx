@@ -8,8 +8,8 @@ import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
 
 const ProjectCard = ({ id, name, description, image, repo, demo, index, active, handleClick }) => {
-  const {t} = useTranslation()
-  
+  const { t } = useTranslation();
+
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -107,8 +107,8 @@ const Projects = () => {
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>{t("projects.case-studies")}</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>{t("projects.projects")}</h2>
+        <p className={`${styles.sectionSubText} `}>{t('projects.case-studies')}</p>
+        <h2 className={`${styles.sectionHeadTextLight}`}>{t('projects.projects')}</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -116,7 +116,7 @@ const Projects = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
-          {t("projects.description")}
+          {t('projects.description')}
         </motion.p>
       </div>
 

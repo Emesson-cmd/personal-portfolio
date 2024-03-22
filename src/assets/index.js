@@ -41,14 +41,15 @@ import ufca from './company/ufca.jpeg';
 import senai from './company/senai_solues_digitais_logo.jpeg';
 
 import pokedex from './projects/pokedex.jpg';
+import notes from './projects/notes.png';
 import tonys from './projects/tonys_cabeleireiro.png';
 import portfolio from './projects/3d_portfolio.png';
 import barbertech from './projects/barber_tech.png';
 import apple from './projects/apple.png';
 
-import usa from './countries/usa.png'
-import brazil from './countries/brazil.png'
-import spain from './countries/spain.png'
+import usa from './countries/usa.png';
+import brazil from './countries/brazil.png';
+import spain from './countries/spain.png';
 
 export {
   bwmap,
@@ -85,6 +86,7 @@ export {
   tailwind,
   typescript,
   pokedex,
+  notes,
   tonys,
   portfolio,
   apple,
@@ -94,5 +96,5 @@ export {
   cmos,
   usa,
   brazil,
-  spain
+  spain,
 };

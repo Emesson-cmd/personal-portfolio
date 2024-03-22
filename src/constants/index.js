@@ -19,7 +19,8 @@ import {
   senai,
   cmos,
   ufca,
-  pokedex,
+  // pokedex,
+  notes,
   apple,
   portfolio,
   barbertech,
@@ -147,27 +148,45 @@ const experiences = [
 ];
 
 const projects = [
+  // {
+  //   id: 'project-1',
+  //   name: 'Pokedex',
+  //   description: 'projects.projects-description.p1',
+  //   tags: [
+  //     {
+  //       name: 'react',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'mongodb',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'tailwind',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: pokedex,
+  //   repo: 'https://github.com/Emesson-cmd/projeto_pokedex',
+  //   demo: 'http://pokedex.kesug.com/',
+  // },
   {
-    id: 'project-1',
-    name: 'Pokedex',
-    description: 'projects.projects-description.p1',
+    id: 'project-6',
+    name: 'Notes',
+    description: 'projects.projects-description.p6',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
         name: 'tailwind',
         color: 'pink-text-gradient',
       },
     ],
-    image: pokedex,
-    repo: 'https://github.com/Emesson-cmd/projeto_pokedex',
-    demo: 'http://pokedex.kesug.com/',
+    image: notes,
+    repo: 'https://github.com/Emesson-cmd/nlw-expert-react',
+    demo: 'https://wondrous-pony-f58ec0.netlify.app/',
   },
   {
     id: 'project-2',
