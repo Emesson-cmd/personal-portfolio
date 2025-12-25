@@ -16,6 +16,7 @@ import {
   docker,
   postgresql,
   graphql,
+  radix,
   senai,
   cmos,
   ufca,
@@ -28,6 +29,13 @@ import {
   loginGoogle,
   schedulingApp,
   signUpApp,
+  nestjs,
+  ddd,
+  firebase,
+  jest,
+  prisma,
+  sass,
+  typeorm,
 } from '../assets';
 
 export const navLinks = [
@@ -86,20 +94,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
     name: 'Node JS',
     icon: nodejs,
-  },
-  {
-    name: 'graphql',
-    icon: graphql,
   },
   {
     name: 'postgresql',
@@ -110,12 +106,24 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: 'git',
-    icon: git,
-  },
-  {
     name: 'docker',
     icon: docker,
+  },
+  {
+    name: 'firebase',
+    icon: firebase,
+  },
+  {
+    name: 'jest',
+    icon: jest,
+  },
+  {
+    name: 'prisma',
+    icon: prisma,
+  },
+  {
+    name: 'NestJS',
+    icon: nestjs,
   },
 ];
 
@@ -385,4 +393,29 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+const techIcons = {
+  react: reactjs,
+  nextjs: nextjs,
+  tailwind: tailwind,
+  javascript: javascript,
+  typescript: typescript,
+  html: html,
+  css: css,
+  redux: redux,
+  nodejs: nodejs,
+  mongodb: mongodb,
+  git: git,
+  docker: docker,
+  postgresql: postgresql,
+  graphql: graphql,
+  radix: radix,
+  nestjs: nestjs,
+  prisma: prisma,
+  firebase: firebase,
+  jest: jest,
+  sass: sass,
+  ddd: ddd,
+  typeorm: typeorm,
+};
+
+export { services, technologies, experiences, projects, techIcons };

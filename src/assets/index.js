@@ -21,6 +21,14 @@ import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
 
+import ddd from './tech/ddd.svg';
+import firebase from './tech/firebase.webp';
+import jest from './tech/jest.svg';
+import prisma from './tech/prisma.svg';
+import sass from './tech/sass.png';
+import typeorm from './tech/typeorm.webp';
+import radix from './tech/radix.png';
+import nestjs from './tech/nestjs.png';
 import css from './tech/css.png';
 import docker from './tech/docker.png';
 import git from './tech/git.png';
@@ -103,4 +111,12 @@ export {
   loginGoogle,
   schedulingApp,
   signUpApp,
+  radix,
+  nestjs,
+  ddd,
+  firebase,
+  jest,
+  prisma,
+  sass,
+  typeorm,
 };
