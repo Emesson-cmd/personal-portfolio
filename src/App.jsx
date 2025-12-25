@@ -30,10 +30,12 @@ const App = () => {
 
         <div
           className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
+            rounded-tl-[150px] rounded-br-[150px]"
+        >
           <div
             className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]"
+          >
             <Experience />
           </div>
         </div>

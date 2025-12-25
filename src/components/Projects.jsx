@@ -24,19 +24,14 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div
+              <ProjectGridCard
                 key={project.id}
-                variants={fadeIn('right', 'spring', 0.2 * index, 0.75)}
-              >
-                <ProjectGridCard
-                  key={project.id}
-                  project={{
-                    ...project,
-                    description: t(project.description),
-                  }}
-                  index={index}
-                />
-              </motion.div>
+                project={{
+                  ...project,
+                  description: t(project.description),
+                }}
+                index={index}
+              />
             ))}
           </div>
         </div>
