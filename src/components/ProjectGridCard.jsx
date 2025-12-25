@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { github, pineapple } from '../assets';
 import TechTag from './TechTag';
+import { ProjectImageCarousel } from './ProjectImageCarousel';
 
 const ProjectGridCard = ({ project }) => {
   const { name, description, image, repo, demo, tags } = project;
@@ -8,14 +9,15 @@ const ProjectGridCard = ({ project }) => {
   return (
     <div className="group relative rounded-xl overflow-hidden bg-jetLight card-shadow h-full flex flex-col">
       {/* Image */}
-      <a href={demo} target="_blank" rel="noopener noreferrer">
+      {/* <a href={demo} target="_blank" rel="noopener noreferrer">
         <img
           src={image}
           alt={name}
           className="h-[220px] w-full object-cover 
           group-hover:scale-105 transition duration-300"
         />
-      </a>
+      </a> */}
+      <ProjectImageCarousel images={image} />
 
       {/* Content */}
       <div className="p-4 flex flex-col flex-1">

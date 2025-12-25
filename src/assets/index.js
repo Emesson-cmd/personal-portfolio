@@ -55,8 +55,17 @@ import portfolio from './projects/3d_portfolio.png';
 import barbertech from './projects/barber_tech.png';
 import apple from './projects/apple.png';
 import loginGoogle from './projects/login-google.png';
+import loginGoogle2 from './projects/login-google-2.png';
+import loginGoogle3 from './projects/login-google-3.png';
 import schedulingApp from './projects/scheduling-app.png';
+import schedulingApp2 from './projects/scheduling-app-2.png';
+import schedulingApp3 from './projects/scheduling-app-3.png';
+import schedulingApp4 from './projects/scheduling-app-4.png';
+import schedulingApp5 from './projects/scheduling-app-5.png';
+import schedulingApp6 from './projects/scheduling-app-6.png';
+import schedulingApp7 from './projects/scheduling-app-7.png';
 import signUpApp from './projects/signup-application-with-credentials.png';
+import signUpApp2 from './projects/signup-application-with-credentials-2.png';
 
 import usa from './countries/usa.png';
 import brazil from './countries/brazil.png';
@@ -108,9 +117,6 @@ export {
   usa,
   brazil,
   spain,
-  loginGoogle,
-  schedulingApp,
-  signUpApp,
   radix,
   nestjs,
   ddd,
@@ -119,4 +125,16 @@ export {
   prisma,
   sass,
   typeorm,
+  loginGoogle,
+  loginGoogle2,
+  loginGoogle3,
+  schedulingApp,
+  schedulingApp2,
+  schedulingApp3,
+  schedulingApp4,
+  schedulingApp5,
+  schedulingApp6,
+  schedulingApp7,
+  signUpApp,
+  signUpApp2,
 };
