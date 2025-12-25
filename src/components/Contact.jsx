@@ -43,7 +43,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_i2yv9db',
+        import.meta.env.VITE_EMAILJS_SERVICE_API,
         'template_z6gq71k',
         {
           name: form.name,
@@ -91,7 +91,9 @@ const Contact = () => {
           className="mt-10 flex flex-col gap-6 font-poppins"
         >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">{t('contact.form.your-name')}</span>
+            <span className="text-timberWolf font-medium mb-4">
+              {t('contact.form.your-name')}
+            </span>
             <input
               type="text"
               name="name"
@@ -105,7 +107,9 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">{t('contact.form.your-email')}</span>
+            <span className="text-timberWolf font-medium mb-4">
+              {t('contact.form.your-email')}
+            </span>
             <input
               type="email"
               name="email"
@@ -145,7 +149,9 @@ const Contact = () => {
             hover:bg-battleGray hover:text-eerieBlack 
             transition duration-[0.2s] ease-in-out"
             onMouseOver={() => {
-              document.querySelector('.contact-btn').setAttribute('src', sendHover);
+              document
+                .querySelector('.contact-btn')
+                .setAttribute('src', sendHover);
             }}
             onMouseOut={() => {
               document.querySelector('.contact-btn').setAttribute('src', send);

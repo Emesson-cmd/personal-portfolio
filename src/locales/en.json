@@ -13,7 +13,7 @@
   "about": {
     "overview": "Overview",
     "introduction": "introduction",
-    "description": "I am a dedicated Full Stack Developer with two years of experience, specializing in both front-end and back-end development. Proficient in technologies like React, TypeScript, NextJS, NestJS, MongoDB, SOLID, and Clean Architecture, I prioritize delivering high-quality products. My commitment to detail, rigorous testing, and adherence to industry best practices reflects my focus on quality. With a degree in Analysis and Development of Systems, I bring a solid theoretical foundation to my practical experience. Eager to contribute to innovative projects and collaborate with dynamic teams, I am well-equipped to navigate the challenges of the ever-evolving tech landscape.",
+    "description": "I am a dedicated Full Stack Developer with 4 years of experience, specializing in both front-end and back-end development. Proficient in technologies like React, TypeScript, NextJS, NestJS, MongoDB, SOLID, and Clean Architecture, I prioritize delivering high-quality products. My commitment to detail, rigorous testing, and adherence to industry best practices reflects my focus on quality. With a degree in Analysis and Development of Systems, I bring a solid theoretical foundation to my practical experience. Eager to contribute to innovative projects and collaborate with dynamic teams, I am well-equipped to navigate the challenges of the ever-evolving tech landscape.",
     "front-end-developer": "Frontend Developer",
     "back-end-developer": "Backend Developer",
     "mobile-developer": "Mobile Developer"
@@ -32,7 +32,10 @@
       "p3": "This is a portfolio template where I use 3D objetcs.",
       "p4": "A complete barber shop app for mobile devices.",
       "p5": "This is a barber shop website where customers can schedule an appointment in a barber shop.",
-      "p6": "In this project you can save a new one using only your voice."
+      "p6": "In this project you can save a new one using only your voice.",
+      "p7": "This project is a simple Next.js application that uses the Google OAuth API to authenticate users and Prisma as the ORM to interact with a PostgreSQL database.",
+      "p8": "A Front-end application for a barber shop that allows customers to schedule appointments.",
+      "p9": "An application with fron-end + back-end reponsable for signing up users and loging in users + reset password send emails."
     }
   },
   "experience": {
@@ -50,11 +53,11 @@
     "get-in-touch": "Get in touch",
     "contact": "Contact.",
     "form": {
-      "your-name":  "Your name",
+      "your-name": "Your name",
       "what-is-your-name": "What`s your name?",
-      "your-email":  "Your email",
+      "your-email": "Your email",
       "what-is-your-email": "What`s your email?",
-      "your-message":  "Your message",
+      "your-message": "Your message",
       "what-is-your-message": "What`s your message?",
       "send": "Send",
       "sending": "Sending",

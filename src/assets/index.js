@@ -46,6 +46,9 @@ import tonys from './projects/tonys_cabeleireiro.png';
 import portfolio from './projects/3d_portfolio.png';
 import barbertech from './projects/barber_tech.png';
 import apple from './projects/apple.png';
+import loginGoogle from './projects/login-google.png';
+import schedulingApp from './projects/scheduling-app.png';
+import signUpApp from './projects/signup-application-with-credentials.png';
 
 import usa from './countries/usa.png';
 import brazil from './countries/brazil.png';
@@ -97,4 +100,7 @@ export {
   usa,
   brazil,
   spain,
+  loginGoogle,
+  schedulingApp,
+  signUpApp,
 };

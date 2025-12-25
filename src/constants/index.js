@@ -25,6 +25,9 @@ import {
   portfolio,
   barbertech,
   tonys,
+  loginGoogle,
+  schedulingApp,
+  signUpApp,
 } from '../assets';
 
 export const navLinks = [
@@ -148,28 +151,132 @@ const experiences = [
 ];
 
 const projects = [
-  // {
-  //   id: 'project-1',
-  //   name: 'Pokedex',
-  //   description: 'projects.projects-description.p1',
-  //   tags: [
-  //     {
-  //       name: 'react',
-  //       color: 'blue-text-gradient',
-  //     },
-  //     {
-  //       name: 'mongodb',
-  //       color: 'green-text-gradient',
-  //     },
-  //     {
-  //       name: 'tailwind',
-  //       color: 'pink-text-gradient',
-  //     },
-  //   ],
-  //   image: pokedex,
-  //   repo: 'https://github.com/Emesson-cmd/projeto_pokedex',
-  //   demo: 'http://pokedex.kesug.com/',
-  // },
+  {
+    id: 'project-9',
+    name: 'Sign Up page page credentials',
+    description: 'projects.projects-description.p9',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'nextjs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'radix',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'nestjs',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'prisma',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'typeorm',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'postgresql',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'clean architecture',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'ddd',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'jest',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: signUpApp,
+    repo: 'https://github.com/Emesson-cmd/front-end-scheduling-app',
+    demo: 'https://agendamento-de-servicos-rho.vercel.app/',
+  },
+  {
+    id: 'project-8',
+    name: 'Front-end Scheduling App',
+    description: 'projects.projects-description.p8',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'nextjs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'radix',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: schedulingApp,
+    repo: 'https://github.com/Emesson-cmd/front-end-scheduling-app/',
+    demo: 'https://front-end-scheduling-app-9ynp.vercel.app/',
+  },
+  {
+    id: 'project-7',
+    name: 'Sign Up with Google page',
+    description: 'projects.projects-description.p7',
+    tags: [
+      {
+        name: 'prisma',
+        color: 'orange-text-gradient',
+      },
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'nextjs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'flowbite',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: loginGoogle,
+    repo: 'https://github.com/Emesson-cmd/share-my-stuff',
+    demo: 'https://share-my-stuff-navy.vercel.app/',
+  },
   {
     id: 'project-6',
     name: 'Notes',
