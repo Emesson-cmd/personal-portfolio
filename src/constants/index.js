@@ -45,6 +45,11 @@ import {
   schedulingApp7,
   signUpApp,
   signUpApp2,
+  borajogarDashboard,
+  borajogarEventPage,
+  borajogarHome,
+  borajogarNovoEvento,
+  borajogarSignup
 } from '../assets';
 
 export const navLinks = [
@@ -168,6 +173,54 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    id: 'project-10',
+    name: "BoraJogar",
+    description: 'A modern, full-featured event management application designed for organizing and managing football/soccer games with participant registration, role management, and waiting list functionality',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'vite',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'radix',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'react-hook-form',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'zod',
+        color: 'orange-text-gradient',
+      },  
+    ],
+    image: [
+      borajogarDashboard,
+      borajogarEventPage,
+      borajogarHome,
+      borajogarNovoEvento,
+      borajogarSignup
+    ],
+    repo: "https://github.com/Emesson-cmd/borajogar-game-on",
+    demo: "https://borajogar-game-on.vercel.app/"
+  },
   {
     id: 'project-9',
     name: 'Sign Up page page credentials',

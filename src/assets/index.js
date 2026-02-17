@@ -66,6 +66,11 @@ import schedulingApp6 from './projects/scheduling-app-6.png';
 import schedulingApp7 from './projects/scheduling-app-7.png';
 import signUpApp from './projects/signup-application-with-credentials.png';
 import signUpApp2 from './projects/signup-application-with-credentials-2.png';
+import borajogarDashboard from './projects/borajogar-dashboard.png';
+import borajogarEventPage from './projects/borajogar-event-page.png';
+import borajogarHome from './projects/borajogar-home.png';
+import borajogarNovoEvento from './projects/borajogar-novo-evento.png';
+import borajogarSignup from './projects/borajogar-signup.png';
 
 import usa from './countries/usa.png';
 import brazil from './countries/brazil.png';
@@ -137,4 +142,9 @@ export {
   schedulingApp7,
   signUpApp,
   signUpApp2,
+  borajogarDashboard,
+  borajogarEventPage,
+  borajogarHome,
+  borajogarNovoEvento,
+  borajogarSignup
 };

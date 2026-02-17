@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export function ProjectImageCarousel({ images }) {
+export function ProjectImageCarousel({ images, onImageClick }) {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((current - 1 + images.length) % images.length);
 
   const next = () => setCurrent((current + 1) % images.length);
+
+  const handleImageClick = () => {
+    if (onImageClick) {
+      onImageClick(current);
+    }
+  };
 
   return (
     <div className="relative w-full h-48 overflow-hidden rounded-xl">
@@ -14,7 +20,8 @@ export function ProjectImageCarousel({ images }) {
       <img
         src={images[current]}
         alt={`Project image ${current + 1}`}
-        className="w-full h-full object-cover transition-all duration-300"
+        className="w-full h-full object-cover transition-all duration-300 cursor-pointer hover:brightness-90"
+        onClick={handleImageClick}
       />
 
       {/* Controls */}
@@ -53,4 +60,5 @@ export function ProjectImageCarousel({ images }) {
 
 ProjectImageCarousel.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onImageClick: PropTypes.func,
 };
