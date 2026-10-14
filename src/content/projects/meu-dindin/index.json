@@ -24,7 +24,8 @@
     "radix",
     "supabase",
     "react-hook-form",
-    "zod"
+    "zod",
+    "docker"
   ],
   "repo": "https://github.com/Emesson-cmd",
   "demo": "https://pocket-ledger-weld.vercel.app/"
