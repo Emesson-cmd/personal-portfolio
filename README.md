@@ -1,67 +1,128 @@
+# Emesson's Portfolio
+
+A personal portfolio website built with React, Three.js and TailwindCSS. It showcases projects, professional experience and tech skills, with 3D elements, smooth animations and support for English, Portuguese and Spanish.
+
+## Features
+
+- Interactive 3D tech icons rendered with Three.js (React Three Fiber)
+- Animations with Framer Motion
+- Multi-language UI (EN / PT / ES) via i18next
+- Project grid with tags, image carousel and image modal
+- Experience timeline
+- Contact form powered by EmailJS
+- File-based content: add projects, experiences and technologies without touching components
+
 ## Built With
 
-- React.js
-- Three.js
-- Framer Motion
-- TailwindCSS
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [Three.js](https://threejs.org/) / [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) / Drei
+- [Framer Motion](https://www.framer.com/motion/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [i18next](https://www.i18next.com/) / react-i18next
+- [EmailJS](https://www.emailjs.com/)
 
 ## Getting Started
 
-To get started, follow these simple steps:
-
 ### Prerequisites
 
-Make sure you have node `16.0.0` or higher and npm `9.0.0` or higher installed.
+- Node.js `16.0.0` or higher
+- npm `9.0.0` or higher
 
-## Install
+### Installation
 
-- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal and run the following commands:
-
-```
+```bash
+git clone <repository-url>
+cd personal-portfolio
 npm install
 ```
 
-This will install all the packages and dependencies used in the project.
+### Environment Variables
 
-## Usage
+The contact form uses EmailJS. Create a `.env` file in the project root:
 
-- Run the following command to start a local server:
-
-```
-npm run dev
-```
-
-This will open up the project on a browser on `http://localhost:5173/`
-
-## Build
-
-- To create a production build:
-
-```
-npm run build
+```env
+VITE_EMAILJS_SERVICE_API=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-- To preview the site as it will appear once deployed:
+Don't commit this file.
+
+## Scripts
+
+| Command           | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `npm run dev`     | Start the dev server at `http://localhost:5173/` |
+| `npm run build`   | Create a production build in `dist/`             |
+| `npm run preview` | Preview the production build locally             |
+| `npm run lint`    | Run ESLint on `src/`                             |
+
+## Project Structure
 
 ```
-npm run preview
+src/
+├── assets/        # Images, icons and backgrounds
+├── components/    # React components (sections, cards, 3D canvas)
+├── constants/     # Shared constants
+├── content/       # Portfolio content (projects, experiences, technologies)
+├── hoc/           # Higher-order components (section wrapper)
+├── locales/       # UI translations (en, pt, es)
+├── utils/         # Animation helpers (Framer Motion variants)
+└── i18n.js        # i18next setup
 ```
 
-## Atualizando o conteúdo
+## Updating Content
 
-Projetos, experiências e tecnologias ficam em `src/content` e são carregados automaticamente (`import.meta.glob`). Não é preciso mexer em componentes nem fazer imports manuais.
+Projects, experiences and technologies live in `src/content` and are loaded automatically with `import.meta.glob`. No component changes or manual imports are needed.
 
-- Novo projeto: crie `src/content/projects/<slug>/index.json` e coloque as imagens na mesma pasta. A ordem do carrossel segue o nome do arquivo (`01-home.png`, `02-...`). No grid, os projetos aparecem do maior `order` para o menor.
-- Nova experiência: crie `src/content/experiences/NN-empresa.json` (o prefixo `NN` define a ordem) e coloque o logo em `experiences/logos/`.
-- Nova tecnologia: adicione o ícone em `src/content/technologies/icons/<nome>.png`. Para ela aparecer na seção de skills, inclua `<nome>` em `technologies/index.json`. Tags de projeto com esse mesmo nome passam a mostrar o ícone.
-- Textos traduzíveis (`description`, `title`) aceitam `{ "en": "...", "pt": "...", "es": "..." }`. Se faltar algum idioma, o texto em inglês é usado.
+### Adding a project
+
+Create `src/content/projects/<slug>/index.json` and put the images in the same folder. The carousel order follows the file names (`01-home.png`, `02-...`). In the grid, projects are sorted from highest to lowest `order`.
+
+```json
+{
+  "order": 100,
+  "name": "My Project",
+  "description": {
+    "en": "Short description in English.",
+    "pt": "Descrição curta em português.",
+    "es": "Descripción corta en español."
+  },
+  "tags": ["react", "typescript"],
+  "repo": "https://github.com/user/repo",
+  "demo": "https://my-project.app"
+}
+```
+
+### Adding an experience
+
+Create `src/content/experiences/NN-company.json` (the `NN` prefix sets the order) and put the logo in `src/content/experiences/logos/`.
+
+```json
+{
+  "title": { "en": "Full-Stack Developer", "pt": "Desenvolvedor Full Stack" },
+  "company_name": "Company Name",
+  "logo": "company.jpeg",
+  "iconBg": "#333333",
+  "date": "Oct 2023 - Present"
+}
+```
+
+### Adding a technology
+
+1. Add the icon at `src/content/technologies/icons/<name>.png` (also accepts `jpg`, `jpeg`, `webp`, `svg`, `gif`).
+2. To show it in the skills section, add `<name>` to the `skills` list in `src/content/technologies/index.json`.
+
+Project tags with the same `<name>` will automatically display the icon.
+
+### Translations
+
+Translatable fields (`description`, `title`) accept either a plain string or an object like `{ "en": "...", "pt": "...", "es": "..." }`. If a language is missing, the English text is used. UI strings live in `src/locales/*.json`.
 
 ## Feedback and Contributions
 
-If you have any feedback, suggestions, or would like to contribute to this project, your involvement is highly valued. Feel free to open an [issue](../../issues/) or submit a pull request with your ideas and enhancements. Remember, this template is a starting point, and the true magic lies in making it your own. Enjoy the journey of creating a stunning portfolio that represents your unique talents and accomplishments!
+Feedback, suggestions and contributions are welcome. Feel free to open an [issue](../../issues/) or submit a pull request.
 
-Happy coding and showcasing!
+## Show Your Support
 
-## Show your support
-
-Give a ⭐️ if you like this project!
+Give a ⭐️ if you like this project.
