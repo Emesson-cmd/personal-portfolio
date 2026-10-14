@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
-import { techIcons } from '../constants';
+import PropTypes from "prop-types";
+import { techIcons } from "../constants";
 
 const TechTag = ({ tag }) => {
-  console.log(tag);
-  const icon = techIcons[tag.name];
+  const icon = techIcons[tag];
 
   return (
     <div
@@ -11,19 +10,14 @@ const TechTag = ({ tag }) => {
       bg-black/30 backdrop-blur-sm border border-white/10
       text-xs text-timberWolf hover:bg-black/40 transition"
     >
-      {icon && (
-        <img src={icon} alt={tag.name} className="w-4 h-4 object-contain" />
-      )}
-      <span className="capitalize">{tag.name}</span>
+      {icon && <img src={icon} alt={tag} className="w-4 h-4 object-contain" />}
+      <span className="capitalize">{tag}</span>
     </div>
   );
 };
 
 TechTag.propTypes = {
-  tag: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    color: PropTypes.string,
-  }).isRequired,
+  tag: PropTypes.string.isRequired,
 };
 
 export default TechTag;

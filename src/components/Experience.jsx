@@ -1,26 +1,33 @@
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { motion } from 'framer-motion';
-import 'react-vertical-timeline-component/style.min.css';
-import { styles } from '../styles';
-import { experiences } from '../constants';
-import { SectionWrapper } from '../hoc';
-import { download, downloadHover, resume } from '../assets';
-import { textVariant } from '../utils/motion';
-import { useTranslation } from 'react-i18next';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import "react-vertical-timeline-component/style.min.css";
+import { styles } from "../styles";
+import { experiences, localize } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { download, downloadHover, resume } from "../assets";
+import { textVariant } from "../utils/motion";
+import { useTranslation } from "react-i18next";
 
-const ExperienceCard = ({ experience, t }) => (
+const ExperienceCard = ({ experience, lang }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: '#eaeaec',
-      color: '#292929',
-      boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+      background: "#eaeaec",
+      color: "#292929",
+      boxShadow:
+        "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
     }}
     contentArrowStyle={{
-      borderRight: '7px solid  #232631',
+      borderRight: "7px solid  #232631",
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">{experience.date}</h3>
+        <h3 className="text-dim text-[18px] font-bold font-beckman">
+          {experience.date}
+        </h3>
       </div>
     }
     iconStyle={{ background: experience.iconBg }}
@@ -36,7 +43,7 @@ const ExperienceCard = ({ experience, t }) => (
   >
     <div>
       <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
-        {t(experience.title)}
+        {localize(experience.title, lang)}
       </h3>
       <p
         className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
@@ -48,42 +55,66 @@ const ExperienceCard = ({ experience, t }) => (
   </VerticalTimelineElement>
 );
 
+const localizedText = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.objectOf(PropTypes.string),
+]);
+
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    title: localizedText.isRequired,
+    company_name: PropTypes.string.isRequired,
+    icon: PropTypes.string,
+    iconBg: PropTypes.string,
+    date: PropTypes.string,
+  }).isRequired,
+  lang: PropTypes.string,
+};
+
 const Experience = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          {t('experience.what-i-have-done-so-far')}
+          {t("experience.what-i-have-done-so-far")}
         </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          {t('experience.work-experience')}
+          {t("experience.work-experience")}
         </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} t={t} />
+          {experiences.map((experience) => (
+            <ExperienceCard
+              key={experience.id}
+              experience={experience}
+              lang={i18n.language}
+            />
           ))}
           <VerticalTimelineElement
             contentStyle={{
-              background: '#eaeaec',
-              color: '#292929',
+              background: "#eaeaec",
+              color: "#292929",
               boxShadow:
-                'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+                "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
             contentArrowStyle={{
-              borderRight: '7px solid  #232631',
+              borderRight: "7px solid  #232631",
             }}
-            iconStyle={{ background: '#333333' }}
+            iconStyle={{ background: "#333333" }}
             icon={
               <div className="flex justify-center items-center w-full h-full">
-                <img src={resume} alt="resume" className="w-[45%] h-[45%] object-contain" />
+                <img
+                  src={resume}
+                  alt="resume"
+                  className="w-[45%] h-[45%] object-contain"
+                />
               </div>
             }
           >
@@ -98,18 +129,22 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/document/d/1dkU_0EG0aI3hQLRDgOIDnrMNQlkB0KxNDPFBpmRzIPo/edit',
-                  '_blank'
+                  "https://docs.google.com/document/d/1dkU_0EG0aI3hQLRDgOIDnrMNQlkB0KxNDPFBpmRzIPo/edit",
+                  "_blank",
                 )
               }
               onMouseOver={() => {
-                document.querySelector('.download-btn').setAttribute('src', downloadHover);
+                document
+                  .querySelector(".download-btn")
+                  .setAttribute("src", downloadHover);
               }}
               onMouseOut={() => {
-                document.querySelector('.download-btn').setAttribute('src', download);
+                document
+                  .querySelector(".download-btn")
+                  .setAttribute("src", download);
               }}
             >
-              {t('experience.my-resume')}
+              {t("experience.my-resume")}
               <img
                 src={download}
                 alt="download"
@@ -124,4 +159,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, 'work');
+export default SectionWrapper(Experience, "work");

@@ -1,0 +1,25 @@
+{
+  "order": 80,
+  "name": "Sign Up page credentials",
+  "description": {
+    "en": "A front-end + back-end application responsible for signing up and logging in users, plus password reset via email.",
+    "pt": "Uma aplicação front-end + back-end responsável pelo cadastro e login de usuários, além de redefinição de senha por e-mail.",
+    "es": "Una aplicación front-end + back-end responsable del registro e inicio de sesión de usuarios, además del restablecimiento de contraseña por correo."
+  },
+  "tags": [
+    "react",
+    "typescript",
+    "nextjs",
+    "tailwind",
+    "radix",
+    "nestjs",
+    "prisma",
+    "typeorm",
+    "postgresql",
+    "clean architecture",
+    "ddd",
+    "jest"
+  ],
+  "repo": "https://github.com/Emesson-cmd/front-end-scheduling-app",
+  "demo": "https://agendamento-de-servicos-rho.vercel.app/"
+}

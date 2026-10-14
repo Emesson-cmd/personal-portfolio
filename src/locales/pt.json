@@ -25,26 +25,12 @@
   "projects": {
     "case-studies": "Estudos de Caso",
     "projects": "Projetos.",
-    "description": "Esses projetos demonstram minha experiência com exemplos práticos do meu trabalho, incluindo breves descrições e links para repositórios de código e demonstrações ao vivo. Eles destacam minha capacidade de enfrentar desafios intricados, adaptar-se a várias tecnologias e supervisionar projetos de forma eficiente.",
-    "projects-description": {
-      "p1": "Projeto de uma Pokedex simples",
-      "p2": "Página de Destino Simples para iPhone",
-      "p3": "Este é um modelo de portfólio onde utilizo objetos em 3D.",
-      "p4": "Um aplicativo completo para barbearia em dispositivos móveis.",
-      "p5": "Este é um site de barbearia onde os clientes podem agendar um horário em uma barbearia.",
-      "p6": "Neste projeto você pode salvar uma nova utilizaando apenas a voz."
-    }
+    "description": "Esses projetos demonstram minha experiência com exemplos práticos do meu trabalho, incluindo breves descrições e links para repositórios de código e demonstrações ao vivo. Eles destacam minha capacidade de enfrentar desafios intricados, adaptar-se a várias tecnologias e supervisionar projetos de forma eficiente."
   },
   "experience": {
     "what-i-have-done-so-far": "O que fiz até agora",
     "work-experience": "Experiência Profissional",
-    "my-resume": "meu curriculo",
-    "experiences": {
-      "exp1": "Desenvolvedor Full Stack",
-      "exp2": "Desenvolvedor Full Stack",
-      "exp3": "Estagiário em Desenvolvimento de Software",
-      "exp4": "Estagiário em Desenvolvimento de Software"
-    }
+    "my-resume": "meu curriculo"
   },
   "contact": {
     "get-in-touch": "Entre em contato",

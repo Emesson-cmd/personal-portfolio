@@ -1,0 +1,12 @@
+{
+  "order": 30,
+  "name": "3D Portfolio",
+  "description": {
+    "en": "A portfolio template that uses 3D objects.",
+    "pt": "Este é um modelo de portfólio onde utilizo objetos em 3D.",
+    "es": "Este es un modelo de portafolio donde utilizo objetos en 3D."
+  },
+  "tags": ["nextjs", "supabase", "css"],
+  "repo": "https://github.com/Emesson-cmd/portfolio",
+  "demo": "https://main--sage-scone-193ddf.netlify.app/"
+}

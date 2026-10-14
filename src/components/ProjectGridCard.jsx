@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import { github, pineapple } from '../assets';
-import TechTag from './TechTag';
-import { ProjectImageCarousel } from './ProjectImageCarousel';
-import { ImageModal } from './ImageModal';
+import { useState } from "react";
+import PropTypes from "prop-types";
+import { github, pineapple } from "../assets";
+import TechTag from "./TechTag";
+import { ProjectImageCarousel } from "./ProjectImageCarousel";
+import { ImageModal } from "./ImageModal";
 
 const ProjectGridCard = ({ project }) => {
   const { name, description, image, repo, demo, tags } = project;
@@ -41,7 +41,7 @@ const ProjectGridCard = ({ project }) => {
           {tags?.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.map((tag, index) => (
-                <TechTag key={`${tag.name}-${index}`} tag={tag} />
+                <TechTag key={`${tag}-${index}`} tag={tag} />
               ))}
             </div>
           )}
@@ -53,7 +53,7 @@ const ProjectGridCard = ({ project }) => {
           >
             {repo && (
               <button
-                onClick={() => window.open(repo, '_blank')}
+                onClick={() => window.open(repo, "_blank")}
                 className="p-2 rounded-full bg-night hover:opacity-80"
               >
                 <img src={github} className="w-4 h-4" />
@@ -62,7 +62,7 @@ const ProjectGridCard = ({ project }) => {
 
             {demo && (
               <button
-                onClick={() => window.open(demo, '_blank')}
+                onClick={() => window.open(demo, "_blank")}
                 className="p-2 rounded-full bg-battleGray hover:bg-gray-300"
               >
                 <img src={pineapple} className="w-4 h-4" />

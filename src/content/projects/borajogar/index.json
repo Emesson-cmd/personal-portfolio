@@ -1,0 +1,21 @@
+{
+  "order": 90,
+  "name": "BoraJogar",
+  "description": {
+    "en": "A modern, full-featured event management application designed for organizing and managing football/soccer games with participant registration, role management, and waiting list functionality.",
+    "pt": "Uma aplicação moderna e completa de gestão de eventos para organizar partidas de futebol, com inscrição de participantes, gestão de papéis e lista de espera.",
+    "es": "Una aplicación moderna y completa de gestión de eventos para organizar partidos de fútbol, con registro de participantes, gestión de roles y lista de espera."
+  },
+  "tags": [
+    "react",
+    "typescript",
+    "vite",
+    "tailwind",
+    "radix",
+    "supabase",
+    "react-hook-form",
+    "zod"
+  ],
+  "repo": "https://github.com/Emesson-cmd/borajogar-game-on",
+  "demo": "https://borajogar-game-on.vercel.app/"
+}

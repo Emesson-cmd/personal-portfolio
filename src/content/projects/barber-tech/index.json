@@ -1,0 +1,12 @@
+{
+  "order": 20,
+  "name": "Barber Tech",
+  "description": {
+    "en": "A complete barber shop app for mobile devices.",
+    "pt": "Um aplicativo completo para barbearia em dispositivos móveis.",
+    "es": "Una aplicación completa para una barbería en dispositivos móviles."
+  },
+  "tags": ["nextjs", "supabase", "css"],
+  "repo": null,
+  "demo": "https://www.linkedin.com/posts/emesson-cavalcante-0662971b6_firebase-reactnative-javascript-activity-7013271284906135552-ciSS?utm_source=share&utm_medium=member_desktop"
+}

@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { projects } from '../constants';
-import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import { useTranslation } from 'react-i18next';
-import ProjectGridCard from './ProjectGridCard';
+import { motion } from "framer-motion";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { projects, localize } from "../constants";
+import { textVariant, staggerContainer } from "../utils/motion";
+import { useTranslation } from "react-i18next";
+import ProjectGridCard from "./ProjectGridCard";
 
 const Projects = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <motion.div variants={staggerContainer()}>
@@ -15,10 +15,10 @@ const Projects = () => {
         <div className="">
           <motion.div variants={textVariant()}>
             <p className={`${styles.sectionSubText} `}>
-              {t('projects.case-studies')}
+              {t("projects.case-studies")}
             </p>
             <h2 className={`${styles.sectionHeadTextLight}`}>
-              {t('projects.projects')}
+              {t("projects.projects")}
             </h2>
           </motion.div>
 
@@ -28,7 +28,7 @@ const Projects = () => {
                 key={project.id}
                 project={{
                   ...project,
-                  description: t(project.description),
+                  description: localize(project.description, i18n.language),
                 }}
                 index={index}
               />
@@ -40,4 +40,4 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, 'projects');
+export default SectionWrapper(Projects, "projects");

@@ -1,0 +1,12 @@
+{
+  "order": 50,
+  "name": "Notes",
+  "description": {
+    "en": "In this project you can save a new note using only your voice.",
+    "pt": "Neste projeto você pode salvar uma nova nota utilizando apenas a voz.",
+    "es": "En este proyecto puedes guardar una nueva nota usando solo tu voz."
+  },
+  "tags": ["react", "tailwind"],
+  "repo": "https://github.com/Emesson-cmd/nlw-expert-react",
+  "demo": "https://wondrous-pony-f58ec0.netlify.app/"
+}
