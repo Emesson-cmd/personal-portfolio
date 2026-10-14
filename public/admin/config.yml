@@ -90,11 +90,6 @@ collections:
     identifier_field: name
     slug: "{{name}}"
     reorder: true # arraste na listagem; grava o campo "order" (1 = primeiro)
-    sortable_fields:
-      fields: [order, name]
-      default:
-        field: order
-        direction: ascending
     summary: "{{name}} {{visible | ternary('', '(oculto)')}}"
     # Imagens ficam na pasta do próprio projeto
     media_folder: ""
@@ -150,12 +145,7 @@ collections:
     format: json
     identifier_field: company_name
     slug: "{{company_name}}"
-    reorder: true
-    sortable_fields:
-      fields: [order, company_name]
-      default:
-        field: order
-        direction: ascending
+    reorder: true # arraste na listagem; grava o campo "order" (1 = primeiro)
     summary: "{{company_name}} · {{date}}"
     # Logos enviados vão para src/content/experiences/logos
     media_folder: logos
