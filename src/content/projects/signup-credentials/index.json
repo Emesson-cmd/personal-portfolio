@@ -1,11 +1,16 @@
 {
-  "order": 80,
+  "order": 3,
+  "visible": true,
   "name": "Sign Up page credentials",
   "description": {
     "en": "A front-end + back-end application responsible for signing up and logging in users, plus password reset via email.",
     "pt": "Uma aplicação front-end + back-end responsável pelo cadastro e login de usuários, além de redefinição de senha por e-mail.",
     "es": "Una aplicación front-end + back-end responsable del registro e inicio de sesión de usuarios, además del restablecimiento de contraseña por correo."
   },
+  "images": [
+    "01.png",
+    "02.png"
+  ],
   "tags": [
     "react",
     "typescript",

@@ -1,11 +1,13 @@
 {
+  "order": 3,
+  "visible": true,
   "title": {
     "en": "Intern Software Developer",
     "pt": "Estagiário em Desenvolvimento de Software",
     "es": "Becario en Desarrollo de Software"
   },
   "company_name": "UFCA Universidade Federal do Cariri",
-  "logo": "ufca.jpeg",
+  "logo": "logos/ufca.jpeg",
   "iconBg": "#333333",
   "date": "May 2022 - Nov 2022"
 }

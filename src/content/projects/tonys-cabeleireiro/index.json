@@ -1,12 +1,20 @@
 {
   "order": 10,
+  "visible": true,
   "name": "Tonys Cabeleireiro",
   "description": {
     "en": "A barber shop website where customers can schedule an appointment.",
     "pt": "Este é um site de barbearia onde os clientes podem agendar um horário.",
     "es": "Este es un sitio web de una barbería donde los clientes pueden programar una cita."
   },
-  "tags": ["nextjs", "supabase", "css"],
-  "repo": null,
+  "images": [
+    "01.png"
+  ],
+  "tags": [
+    "nextjs",
+    "supabase",
+    "css"
+  ],
+  "repo": "",
   "demo": "https://tonyscabeleireiro.com.br/"
 }

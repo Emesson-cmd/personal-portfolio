@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Painel administrativo do portfólio (Sveltia CMS).
+# Login: botão "Sign In with Token" + Personal Access Token do GitHub
+# (fine-grained, só este repositório, permissão Contents: Read and write).
+# Cada "Salvar" gera um commit na main e o Netlify refaz o deploy.
+
+backend:
+  name: github
+  repo: Emesson-cmd/personal-portfolio
+  branch: main
+  commit_messages:
+    create: "content({{collection}}): cria {{slug}}"
+    update: "content({{collection}}): atualiza {{slug}}"
+    delete: "content({{collection}}): remove {{slug}}"
+    uploadMedia: "content(media): envia {{path}}"
+    deleteMedia: "content(media): remove {{path}}"
+
+# Fallback global (cada coleção abaixo define sua própria pasta).
+media_folder: /public/media
+public_folder: /media
+
+# Converte imagens enviadas para webp e limita o tamanho (SVG é otimizado).
+media_libraries:
+  default:
+    config:
+      max_file_size: 2048000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1920
+          height: 1920
+        svg:
+          optimize: true
+
+collections:
+  # ---------------------------------------------------------------- Skills
+  - name: skills
+    label: Skills
+    icon: psychology
+    files:
+      - name: technologies
+        label: Skills e configurações
+        file: src/content/technologies/index.json
+        # Ícones enviados vão para src/content/technologies/icons
+        media_folder: icons
+        public_folder: icons
+        fields:
+          - name: maxSkills
+            label: Máximo de skills exibidas
+            hint: Quantas skills visíveis aparecem na seção "Skills" (seguindo a ordem da lista).
+            widget: number
+            value_type: int
+            min: 1
+            default: 14
+          - name: skills
+            label: Skills
+            label_singular: Skill
+            hint: Arraste para reordenar. A primeira da lista aparece na posição 1. Skills ocultas continuam disponíveis como tag nos projetos.
+            widget: list
+            add_to_top: true
+            summary: "{{fields.name}} {{fields.visible | ternary('', '(oculta)')}}"
+            fields:
+              - name: name
+                label: Nome
+                hint: Identificador usado nas tags dos projetos (ex. docker, react).
+                widget: string
+              - name: icon
+                label: Ícone
+                hint: Envie uma imagem ou informe uma URL. Sem ícone, a skill não aparece na seção Skills.
+                widget: image
+                required: false
+                choose_url: true
+              - name: visible
+                label: Exibir na seção Skills
+                widget: boolean
+                default: true
+
+  # -------------------------------------------------------------- Projetos
+  - name: projects
+    label: Projetos
+    label_singular: Projeto
+    icon: work
+    folder: src/content/projects
+    path: "{{slug}}/index"
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{name}}"
+    reorder: true # arraste na listagem; grava o campo "order" (1 = primeiro)
+    sortable_fields:
+      fields: [order, name]
+      default:
+        field: order
+        direction: ascending
+    summary: "{{name}} {{visible | ternary('', '(oculto)')}}"
+    # Imagens ficam na pasta do próprio projeto
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - name: visible
+        label: Exibir no site
+        widget: boolean
+        default: true
+      - name: name
+        label: Nome do projeto
+        widget: string
+      - name: description
+        label: Descrição
+        widget: object
+        fields:
+          - { name: en, label: Inglês, widget: text }
+          - { name: pt, label: Português, widget: text, required: false }
+          - { name: es, label: Espanhol, widget: text, required: false }
+      - name: images
+        label: Imagens
+        hint: Envie ou informe URLs. Arraste para reordenar; a primeira é a capa do carrossel.
+        widget: image
+        multiple: true
+        required: false
+        choose_url: true
+      - name: tags
+        label: Skills utilizadas
+        hint: Só aparecem skills cadastradas em Skills.
+        widget: relation
+        collection: skills
+        file: technologies
+        value_field: "{{skills.*.name}}"
+        display_fields: ["{{skills.*.name}}"]
+        search_fields: ["{{skills.*.name}}"]
+        multiple: true
+        required: false
+      - {
+          name: repo,
+          label: Repositório (URL),
+          widget: string,
+          required: false,
+        }
+      - { name: demo, label: Demo (URL), widget: string, required: false }
+
+  # ---------------------------------------------------------- Experiências
+  - name: experiences
+    label: Experiências
+    label_singular: Experiência
+    icon: badge
+    folder: src/content/experiences
+    extension: json
+    format: json
+    identifier_field: company_name
+    slug: "{{company_name}}"
+    reorder: true
+    sortable_fields:
+      fields: [order, company_name]
+      default:
+        field: order
+        direction: ascending
+    summary: "{{company_name}} · {{date}}"
+    # Logos enviados vão para src/content/experiences/logos
+    media_folder: logos
+    public_folder: logos
+    fields:
+      - name: visible
+        label: Exibir no site
+        widget: boolean
+        default: true
+      - name: title
+        label: Cargo
+        widget: object
+        fields:
+          - { name: en, label: Inglês, widget: string }
+          - { name: pt, label: Português, widget: string, required: false }
+          - { name: es, label: Espanhol, widget: string, required: false }
+      - { name: company_name, label: Empresa, widget: string }
+      - name: logo
+        label: Logo
+        widget: image
+        choose_url: true
+      - name: iconBg
+        label: Cor de fundo do ícone
+        widget: color
+        default: "#333333"
+      - name: date
+        label: Período
+        hint: 'Ex.: "Oct 2023 - Present"'
+        widget: string

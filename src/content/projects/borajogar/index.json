@@ -1,11 +1,19 @@
 {
-  "order": 90,
+  "order": 2,
+  "visible": true,
   "name": "BoraJogar",
   "description": {
     "en": "A modern, full-featured event management application designed for organizing and managing football/soccer games with participant registration, role management, and waiting list functionality.",
     "pt": "Uma aplicação moderna e completa de gestão de eventos para organizar partidas de futebol, com inscrição de participantes, gestão de papéis e lista de espera.",
     "es": "Una aplicación moderna y completa de gestión de eventos para organizar partidos de fútbol, con registro de participantes, gestión de roles y lista de espera."
   },
+  "images": [
+    "01-dashboard.png",
+    "02-event-page.png",
+    "03-home.png",
+    "04-novo-evento.png",
+    "05-signup.png"
+  ],
   "tags": [
     "react",
     "typescript",

@@ -1,11 +1,17 @@
 {
-  "order": 60,
+  "order": 5,
+  "visible": true,
   "name": "Sign Up with Google page",
   "description": {
     "en": "A simple Next.js application that uses the Google OAuth API to authenticate users and Prisma as the ORM to interact with a PostgreSQL database.",
     "pt": "Uma aplicação Next.js simples que usa a API OAuth do Google para autenticar usuários e o Prisma como ORM para acessar um banco PostgreSQL.",
     "es": "Una aplicación Next.js sencilla que usa la API OAuth de Google para autenticar usuarios y Prisma como ORM para acceder a una base de datos PostgreSQL."
   },
+  "images": [
+    "01.png",
+    "02.png",
+    "03.png"
+  ],
   "tags": [
     "prisma",
     "react",

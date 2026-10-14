@@ -75,13 +75,21 @@ src/
 
 Projects, experiences and technologies live in `src/content` and are loaded automatically with `import.meta.glob`. No component changes or manual imports are needed.
 
+### Admin panel (Sveltia CMS)
+
+Open `/admin/` on the deployed site and click **Sign In with Token**. Use a GitHub fine-grained token scoped to this repository with **Contents: Read and write**. Every save creates a commit on `main`, and Netlify redeploys the site in about 1–2 minutes. The configuration is in `public/admin/config.yml`.
+
+Image fields accept a URL (`https://...`), a public path (`/media/...`) or a path relative to the JSON file (`icons/react.png`, `01.png`).
+
 ### Adding a project
 
-Create `src/content/projects/<slug>/index.json` and put the images in the same folder. The carousel order follows the file names (`01-home.png`, `02-...`). In the grid, projects are sorted from highest to lowest `order`.
+Create `src/content/projects/<slug>/index.json` and put the images in the same folder. The carousel follows the `images` list (if omitted, all images in the folder in file-name order). Projects are sorted by `order` ascending (1 = first) and hidden when `visible` is `false`.
 
 ```json
 {
-  "order": 100,
+  "order": 1,
+  "visible": true,
+  "images": ["01-home.png", "https://example.com/screenshot.png"],
   "name": "My Project",
   "description": {
     "en": "Short description in English.",
@@ -96,13 +104,15 @@ Create `src/content/projects/<slug>/index.json` and put the images in the same f
 
 ### Adding an experience
 
-Create `src/content/experiences/NN-company.json` (the `NN` prefix sets the order) and put the logo in `src/content/experiences/logos/`.
+Create `src/content/experiences/<company>.json` and put the logo in `src/content/experiences/logos/`. Experiences are sorted by `order` ascending.
 
 ```json
 {
+  "order": 1,
+  "visible": true,
   "title": { "en": "Full-Stack Developer", "pt": "Desenvolvedor Full Stack" },
   "company_name": "Company Name",
-  "logo": "company.jpeg",
+  "logo": "logos/company.jpeg",
   "iconBg": "#333333",
   "date": "Oct 2023 - Present"
 }
@@ -110,10 +120,13 @@ Create `src/content/experiences/NN-company.json` (the `NN` prefix sets the order
 
 ### Adding a technology
 
-1. Add the icon at `src/content/technologies/icons/<name>.png` (also accepts `jpg`, `jpeg`, `webp`, `svg`, `gif`).
-2. To show it in the skills section, add `<name>` to the `skills` list in `src/content/technologies/index.json`.
+Add an item to `skills` in `src/content/technologies/index.json`:
 
-Project tags with the same `<name>` will automatically display the icon.
+```json
+{ "name": "docker", "icon": "icons/docker.png", "visible": true }
+```
+
+The list order is the order in the skills section, which shows up to `maxSkills` visible skills that have an icon. Hidden skills (`visible: false`) can still be used as project tags. Project tags with the same `name` display the icon.
 
 ### Translations
 

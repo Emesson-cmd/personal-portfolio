@@ -1,11 +1,21 @@
 {
-  "order": 100,
+  "order": 1,
+  "visible": true,
   "name": "Meu DinDin",
   "description": {
     "en": "A professional personal finance tracker built with React, TypeScript, and Supabase. Lightweight, fast, offline-capable, and designed with a modern Tailwind + Shadcn/UI interface.",
     "pt": "Um gerenciador de finanças pessoais feito com React, TypeScript e Supabase. Leve, rápido, funciona offline e tem uma interface moderna com Tailwind + Shadcn/UI.",
     "es": "Un gestor de finanzas personales hecho con React, TypeScript y Supabase. Ligero, rápido, funciona sin conexión y tiene una interfaz moderna con Tailwind + Shadcn/UI."
   },
+  "images": [
+    "01-home.png",
+    "02-menu-lateral.png",
+    "03-chat-bot-ia.png",
+    "04-import-planilhas.png",
+    "05-insights-ia.png",
+    "06-pesquisa-transacao.png",
+    "07-relatorios.png"
+  ],
   "tags": [
     "react",
     "typescript",

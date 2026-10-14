@@ -1,12 +1,28 @@
 {
-  "order": 70,
+  "order": 4,
+  "visible": true,
   "name": "Front-end Scheduling App",
   "description": {
     "en": "A front-end application for a barber shop that allows customers to schedule appointments.",
     "pt": "Uma aplicação front-end para barbearia que permite aos clientes agendar horários.",
     "es": "Una aplicación front-end para una barbería que permite a los clientes programar citas."
   },
-  "tags": ["react", "typescript", "nextjs", "tailwind", "radix"],
+  "images": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png"
+  ],
+  "tags": [
+    "react",
+    "typescript",
+    "nextjs",
+    "tailwind",
+    "radix"
+  ],
   "repo": "https://github.com/Emesson-cmd/front-end-scheduling-app/",
   "demo": "https://front-end-scheduling-app-9ynp.vercel.app/"
 }

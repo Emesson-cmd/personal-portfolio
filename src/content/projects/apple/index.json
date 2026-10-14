@@ -1,12 +1,20 @@
 {
-  "order": 40,
+  "order": 7,
+  "visible": true,
   "name": "Apple",
   "description": {
     "en": "Simple iPhone landing page.",
     "pt": "Página de destino simples para iPhone.",
     "es": "Página de aterrizaje simple para iPhone."
   },
-  "tags": ["react", "restapi", "scss"],
+  "images": [
+    "01.png"
+  ],
+  "tags": [
+    "react",
+    "restapi",
+    "scss"
+  ],
   "repo": "https://github.com/Emesson-cmd/recriando_apple",
   "demo": "https://emesson-cmd.github.io/recriando_apple/apple/"
 }
